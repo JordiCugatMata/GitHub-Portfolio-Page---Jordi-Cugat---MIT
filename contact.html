@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jordi Cugat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Web designer and UI specialist">
+  <meta name="author" content="Name Lastname">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/JordiCugatfavicon.png">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { height: 400px; width: 100%; } /* Tamaño del mapa */
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="navBar">
+
+
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="images/JordiCugatlogo.png" alt="Logo 'Jordi Cugat'">Jordi Cugat</a>
+        </div>
+        <nav>
+          <input type="checkbox" id="drop" />
+          <label id="hamburger" for="drop" title="menu"><span class="sr-only"></span>
+          </label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a> </li>
+            <li><a href="projects.html">Projects</a> </li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <section id="headPage" class="coverImage">
+      <div class="coverImageOverlay">
+        <div class="container headPage-content">
+          <h1>Contact</h1>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+
+    <div class="container">
+      <div class="displayFlex ">
+
+        <div class="col-8 thePadding">
+
+          <!-- body information -->
+          <section class="borderBotton">
+            <h2>Contact me</h2>
+            <p>I will be delighted to assist you in our offices. You can also contact me by phone or through the contact form on the page. I will reply to you as soon as possible.</p>
+            <div class="contact">
+              <div id="map">  
+              </div>
+              <div>
+                <h4>My address </h4>
+                <address>
+                  <p>Calle Ejemplo 123</p>
+                  <p>Barcelona, España</p>
+                  <p>Código Postal: 08000</p>
+                </address>
+              </div>
+            </div>
+
+          </section>
+
+
+
+          <section class="form">
+            <h2>Send a Direct Message</h2>
+            <p>Fields with<span class="red">*</span> are required </p>
+            <form action="#" method="post" id="contact-form">
+              <fieldset class=" displayFlex ">
+                <legend>Personal information</legend>
+                <div class="col-6">
+                  <label for="name">Your Name:<span class="red">*</span> </label>
+                  <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="col-6">
+                  <label for="surname">Your Surname:<span class="red">*</span> </label>
+                  <input type="text" name="surname" id="surname" required>
+                </div>
+
+                <div class="col-6">
+                  <label for="phone">Phone:</label>
+                  <input type="text" name="phone" id="phone">
+                </div>
+
+                <div class="col-6 ">
+                  <p class="label">Gender</p>
+                  <div class="displayFlex ">
+                    <div class="col-6 radioPosition">
+                      <label class="radioContainer" for="woman">Woman
+                        <input type="radio" checked="checked" name="radio" id="woman">
+                        <span class="checkmarkRadio"></span>
+                      </label>
+                    </div>
+                    <div class="col-6 radioPosition">
+                      <label class="radioContainer" for="man">Man
+                        <input type="radio" name="radio" id="man">
+                        <span class="checkmarkRadio "></span>
+                      </label>
+                    </div>
+                    <div class="col-6 radioPosition">
+                      <label class="radioContainer" for="prefer not to say">Prefer not to say
+                        <input type="radio" name="radio" id="prefer not to say">
+                        <span class="checkmarkRadio "></span>
+                      </label>
+                    </div>
+                </div>
+                </div>
+                <div class="col-6">
+                  <label for="town">Town:</label>
+                  <input type="text" name="town" id="town">
+                </div>
+                <div class="col-6">
+                  <label for="country">Country:</label>
+                  <input type="text" name="country" id="country">
+                </div>
+
+                <div class="col-12">
+                  <label for="email">Email Address: <span class="red">*</span> </label>
+                  <input type="email" name="email" id="email" required>
+                </div>
+
+              </fieldset>
+
+              <fieldset class=" displayFlex ">
+                <legend>What does it mean to me?</legend>
+                <div class="col-12">
+                  <label for="subject">Subject:</label>
+                  <select name="select" id="subject">
+                    <option value="value1">Request 1</option>
+                    <option value="value2">Request 2</option>
+                    <option value="value3">Request 3</option>
+                    <option value="value4">Request 4</option>
+                    <option value="value5">Another questions</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+
+                  <label for="message">Your message:</label>
+                  <textarea name="message" id="message"></textarea>
+
+                </div>
+              </fieldset>
+              <div class="agreeRow">
+                <label for="agree" class="chekContainer">I have read and accept <a href="#">the terms and conditions of use.</a>
+                  <input type="checkbox" id="agree" name="agree" value="agree">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <button class="mainBtn" id="submit">Send Message</button>
+
+            </form>
+
+          </section>
+
+          <!-- /.end body information -->
+        </div>
+
+        <aside class="col-4">
+
+          <section>
+
+            <h4 class="widget-title">Recent Posts</h4>
+            <div class="displayFlex">
+              <div class="blog borderBotton">
+                <div class="imgBlog">
+                  <a href="#">
+                    <figure>
+                      <img src="images/blog1.jpg" alt="image 1 of the blog summary">
+                    </figure>
+                  </a>
+                </div>
+                <div class="blogContent">
+                  <h3 class="blogText"><a href="#">Design contest winners 2025</a></h3>
+                  <time datetime="2025-02-12">12 February 2025</time>
+                </div>
+              </div>
+
+              <div class="blog borderBotton">
+                <div class="imgBlog">
+                  <a href="#">
+                    <figure>
+                      <img src="images/blog2.jpg" alt="image 2 of the blog summary">
+                    </figure>
+                  </a>
+                </div>
+                <div class="blogContent">
+                  <h3 class="blogText"><a href="#">How to create a website that has thousands of visits</a></h3>
+                  <time datetime="2025-02-12">10 February 2025</time>
+                </div>
+              </div>
+              <div class="blog borderBotton">
+                <div class="imgBlog">
+                  <a href="#">
+                    <figure>
+                      <img src="images/blog3.jpg" alt="image 3 of the blog summary">
+                    </figure>
+                  </a>
+                </div>
+                <div class="blogContent">
+                  <h3 class="blogText"><a href="#">One page layouts vs conventional layouts.</a></h3>
+                  <time datetime="2025-02-08">8 February 2025</time>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section>
+            <h5 class="widget-title">My social media</h5>
+            <nav>
+              <ul class="displayFlex social-nav">
+                <li><a href="#" class="fa fa-facebook" title="Button to facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter" title="Button to twitter"></a></li>
+                <li><a href="#" class="fa fa-linkedin" title="Button to linkedin"></a></li>
+                <li><a href="#" class="fa fa-youtube" title="Button to youtube"></a></li>
+                <li><a href="#" class="fa fa-instagram" title="Button to instagram"></a></li>
+                <li><a href="#" class="fa fa-rss" title="Button to RSS"></a></li>
+              </ul>
+            </nav>
+          </section> <!-- /.sidebar-widget -->
+
+
+
+          <section class="offer">
+            <h5 class="widget-title">Special offer</h5>
+            <p class="light-text">I have a special offer for you if this is your first time working with me. Consult me, surely you will be interested.</p>
+          </section> <!-- /.sidebar-widget -->
+
+
+        </aside> <!-- /.col-4 -->
+
+      </div> <!-- /.displayFlex  -->
+    </div> <!-- /.container -->
+
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <nav class="footer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a> </li>
+            <li><a href="projects.html">Projects</a> </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="footer-text"> Jordi Cugat | Practice <abbr title="Massachusetts Institute of Technology"> MIT </abbr>2025 </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaW9tb3Jlbm9jYW50aW5mbGFzIiwiYSI6ImNtZTM4OHI1cjA0a3MyaXM3dHR4cGpkNjAifQ.pSMlena3P3TM7Mtkdpp7kw';
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [2.173504, 41.403706], // Sagrada Família
+    zoom: 15, // Zoom más cercano para detalles
+    pitch: 45, // Inclinación para vista 3D
+    bearing: -17.6 // Rotación ligera para mejor perspectiva
+  });
+
+  // Añadir control de navegación para rotar y hacer zoom
+  map.addControl(new mapboxgl.NavigationControl());
+
+  // Añadir edificios 3D al cargar el mapa
+  map.on('load', () => {
+    map.addLayer({
+      id: '3d-buildings',
+      source: 'composite',
+      'source-layer': 'building',
+      filter: ['==', 'extrude', 'true'],
+      type: 'fill-extrusion',
+      minzoom: 14,
+      paint: {
+        'fill-extrusion-color': '#aaa',
+        'fill-extrusion-height': ['get', 'height'],
+        'fill-extrusion-base': ['get', 'min_height'],
+        'fill-extrusion-opacity': 0.6
+      }
+    });
+
+    // Añadir un marcador 3D con un elemento HTML personalizado
+    const markerElement = document.createElement('div');
+    markerElement.style.width = '20px';
+    markerElement.style.height = '20px';
+    markerElement.style.background = 'red';
+    markerElement.style.borderRadius = '50%'; // Forma esférica
+    markerElement.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+    markerElement.style.transform = 'translateZ(20px)'; // Efecto 3D
+    markerElement.style.animation = 'pulse 2s infinite'; // Animación pulsante
+
+    // Añadir el marcador al mapa
+    new mapboxgl.Marker({ element: markerElement })
+      .setLngLat([2.173504, 41.403706])
+      .addTo(map);
+  });
+  </script>
+
+</body>
+
+</html>

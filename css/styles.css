@@ -1,0 +1,893 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body, input, textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding-top: 70px;
+  color: #0c0c0d;
+  margin: 0px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  margin: 24px 0;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-top: 0;
+}
+
+h3 {
+  margin: 0 0 0.5em 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: #647d03;
+  font-weight: normal;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+a:hover, a:focus {
+  color: #000;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #5b5b5b;
+  margin: 0 0 1em 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.displayFlex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.coverImage {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 70% center;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.coverImageOverlay {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+@media (min-width: 768px) {
+  .coverImage {
+    background-position: center center !important;
+  }
+}
+
+/* header*/
+.navBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+  background: white;
+  font-weight: bold;
+}
+
+.navBar .container {
+  display: flex;
+  align-items: flex-start !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  vertical-align: middle;
+  margin-right: 0.5em;
+  width: 40px;
+}
+
+.navBar .logo a {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: bold;
+  color: #647d03;
+  /**/
+}
+
+.navBar a {
+  font-weight: bold;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.navBar a:focus, .navBar a:hover {
+  text-decoration: none;
+}
+
+.active {
+  background-color: #647d03;
+}
+
+.navBar a.active {
+  color: #fff;
+}
+
+.navBar nav ul, .navBar nav #drop {
+  display: none;
+}
+
+.navBar nav #drop:checked~ul {
+  display: block;
+  clear: both;
+  margin: 0;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  /*height: 260px;*/
+  background: white;
+  overflow: hidden;
+}
+
+.navBar nav li a {
+  display: block;
+  padding: 1em;
+  text-align: center;
+  border: solid 2px #fff;
+}
+
+.navBar nav li a:hover {
+border: solid 2px #647d03;
+}
+
+.navBar #hamburger {
+  user-select: none;
+  cursor: pointer;
+  float: right;
+}
+
+.navBar #hamburger:after {
+  font-size: 2.2em;
+  content: "\2630";
+  line-height: 1.3em;
+}
+
+.navBar nav #drop:checked~#hamburger:after {
+  content: "\2715";
+}
+
+.navBar nav li {
+  padding: 0;
+  width: 100%;
+}
+
+
+
+@media (min-width: 768px) {
+  .navBar #hamburger, .navBar #drop {
+    display: none;
+  }
+
+  .color-mode span {
+    display: inline;
+  }
+
+  .navBar nav ul {
+    display: flex;
+  }
+
+  .navBar nav li {
+    padding: 0 5px;
+    width: 100px;
+  }
+
+  .navBar button {
+    display: none;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  .col-8 {
+    width: 66.6666%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-4 {
+    width: 33.33333%;
+  }
+
+  aside {
+    padding-left: 20px;
+  }
+
+  .thePadding {
+    padding: 40px 30px 30px 0 !important;
+  }
+
+}
+
+@media (min-width: 1020px) {
+
+.navBar .logo a{
+  font-size: 1.8em
+}
+  .navBar nav li {
+    width: 140px;
+  }
+
+}
+/* Headboard */
+#headboard {
+  background-image: url("../images/Caro.jpg");
+}
+
+.headboard-content {
+  padding: 11em 0;
+  text-align: center;
+}
+
+.headboard-content h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.headboard-content p {
+  color: #a1c905;
+}
+
+/*section staff*/
+.theStaff {
+  padding-top: 70px;
+  text-align: center;
+}
+
+.staff {
+  padding: 40px;
+}
+
+.staffImg {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.staffImg img {
+  width: 300px;
+}
+
+.memberRole {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.memberContent {
+  padding: 10px 0;
+}
+
+.memberContent p {
+  text-align: left;
+}
+
+figure {
+
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/*section testimonial*/
+.testimonial {
+  background-color: #f1f4f5;
+  padding: 70px 0;
+}
+
+.testimonialText {}
+
+blockquote {
+  width: 80%;
+  margin: 50px auto;
+  font-style: italic;
+  color: #5a7001;
+  padding: 1.2em 30px 1.2em 40px;
+  border-left: 8px solid #647d03;
+  position: relative;
+  background: #EDEDED;
+}
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #5a7001;
+  font-size: 4em;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+
+blockquote::after {
+  content: "";
+}
+
+blockquote cite {
+  display: block;
+  color: #5a7001;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+  text-align: right;
+}
+
+/*section our blog*/
+#ourBlog {
+  background-image: url("../images/Caro.jpg");
+  background-position: center center !important;
+  text-align: center;
+}
+
+.sectionHeader {
+  padding-top: 70px;
+}
+
+.lastBlog {
+  padding-bottom: 70px;
+  text-align: left;
+}
+
+.blog {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.blog img {
+  border: 3px solid white;
+  width: 80px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.imgBlog {
+  width: 90px;
+}
+
+.blogContent {
+  width: 220px;
+  margin: 0 10px;
+}
+
+.blogContent h3 a {
+  color: #a1c905;
+}
+
+.blogContent h3 a:hover {
+  color: #fff;
+}
+
+h3.blogText a {
+  color: #647d03;
+}
+
+h3.blogText a:hover {
+  color: #000;
+}
+
+.blogLastText {
+  background-color: rgba(255, 255, 255, 0.58);
+  padding: 15px;
+  color: #000;
+}
+
+/* footer  */
+footer {
+  background-color: #698303;
+  padding: 100px 0;
+  text-align: center;
+}
+
+p.footer-text {
+    color: #fff;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer nav li {
+  padding: 10px 15px;
+  width: 120px;
+}
+
+footer nav li a {
+  color: #000;
+}
+footer nav li a:hover{
+  color:#fff;
+}
+abbr{
+  text-decoration: none;
+}
+
+/*inside pages*/
+#headPage {
+  background-image: url("../images/Caro.jpg");
+  background-position: center right !important;
+}
+
+.headPage-content {
+  padding: 5em 0;
+  text-align: left;
+}
+
+.headPage-content h1 {
+  color: #fff;
+  padding-top: 0.8em;
+}
+
+aside {
+  padding-left: 0px;
+}
+
+.thePadding {
+  padding: 40px 0px 0px 0;
+}
+
+.social-nav {
+  justify-content: flex-start;
+}
+/*social buttons*/
+.fa {
+  box-sizing: content-box;
+  padding: 20px;
+  margin: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.6;
+}
+
+/* Set a specific color for each brand */
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/*Youtube*/
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/*Linkedin*/
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+/*Instagram*/
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/*RSS*/
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
+.offer {
+  border: dashed 1px #647d03;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.borderBotton {
+  border-bottom: solid 1px #647d03;
+}
+
+/*contac page*/
+address{
+  margin: 0 15px;
+}
+
+section.form{
+  margin-top: 1.5em;
+}
+
+fieldset {
+  border: solid 2px #647d03;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+
+legend {
+  color: #647d03;
+}
+
+input, textarea, select {
+  border: 0;
+  padding: 8px 14px;
+  background-color: #f1f4f5;
+  border: 1px solid #647d03;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  width: 90%;
+  margin-left: 20px;
+  font-size: 1.2em;
+  color: #000;
+}
+
+textarea, select {
+  width: 95%;
+}
+
+input[type="email"] {
+  width: 95%;
+}
+
+input:focus, textarea:focus, select:focus {
+  background-color: #698303;
+}
+
+label {
+  font-weight: normal;
+  display: block;
+  margin: 10px 0 5px 0;
+}
+
+
+.red {
+  font-size: 1.4em;
+  color: red;
+}
+
+/*checkbox*/
+.chekContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.chekContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: solid 1px #698303;
+}
+
+/* On mouse-over, add a grey background color */
+.chekContainer:hover input~.checkmark {
+  background-color: #698303;
+}
+
+/* When the checkbox is checked, add a blue background */
+.chekContainer input:checked~.checkmark {
+  background-color: #698303;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.chekContainer input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.chekContainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*radiobutton*/
+/* The container */
+.radioContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmarkRadio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input~.checkmarkRadio {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioContainer input:checked~.checkmarkRadio {
+  background-color: #698303;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmarkRadio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked~.checkmarkRadio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .checkmarkRadio:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/**/
+.label {
+  font-weight: normal;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.radioPosition {
+  padding-left: 20px;
+  width: 50%;
+}
+
+.agreeRow {
+  padding: 30px;
+}
+
+/**/
+button#submit {
+  background-color: #698303;
+  font-size: 20px;
+  padding: 20px;
+  width: 100%;
+  border: #698303;
+  margin-bottom: 40px;
+}
+
+button#submit:hover {
+  background-color: #aaaaaa;
+}
+
+
+/* tabla pagina de precios */
+/*  CSS tabla flexbox para movil */
+caption {
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  margin: 20px 0 30px 0;
+}
+
+table{
+  width: 100%
+}
+
+table thead {
+  left: -9999px;
+  position: absolute;
+  visibility: hidden;
+}
+
+table tr {
+  border-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+table td {
+  border: 1px solid;
+  margin: 0 -1px -1px 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+/*td:first-child {
+  width: 100%%;
+  background-color: red;
+}*/
+
+table td::before {
+  content: attr(data-label);
+  float: left;
+  background: #698303;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+
+table tfoot td::before{
+  display: none;
+}
+
+tfoot tr td {
+  width: 100%;
+}
+
+th {
+  width: 100%;
+  background-color: #a1c905;
+  padding: 10px;
+}
+
+#Desing,#marketing{
+  background-color: #85a701;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+
+}
+@media (min-width: 768px) {
+  table tr {
+    display: revert;
+  }
+
+  table thead {
+    left: 0px;
+    position: initial;
+    visibility: visible;
+  }
+  table td::before {
+    display: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  table thead tr th {
+      background-color: #698303;
+      text-align: center;
+  }
+
+  table th {
+    width: 20%;
+  }
+
+  table td {
+    width: 30%;
+  }
+
+  table tr {
+    background: white;
+    border-bottom: 1px solid
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  table th, table td {
+    padding: 10px 20px;
+  }
+}
